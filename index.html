@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="QuickTools - free online calculators, unit converters and PDF tools.">
+  <title>QuickTools — Free Online Tools</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="QuickTools home"><span>Q</span> QuickTools</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    <nav id="navLinks">
+      <a href="#calculators">Calculators</a>
+      <a href="#converters">Converters</a>
+      <a href="#pdf-tools">PDF Tools</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-inner">
+    <div>
+      <p class="eyebrow">FREE ONLINE TOOLS</p>
+      <h1>Simple tools.<br><span>Instant results.</span></h1>
+      <p class="hero-copy">Calculate, convert and work with PDFs directly in your browser.</p>
+      <div class="search-wrap">
+        <span>⌕</span><input id="toolSearch" type="search" placeholder="Search a tool…">
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-icon">⚡</div>
+      <h3>QuickTools</h3>
+      <p>No account required for the core tools.</p>
+      <div class="mini-stats"><b>3</b><small>Tool categories</small><b>20+</b><small>Utilities</small></div>
+    </div>
+  </div>
+</section>
+
+<div class="container" id="searchResults"></div>
+
+<section class="section" id="calculators">
+  <div class="section-head"><div><p class="eyebrow">CALCULATE</p><h2>Calculators</h2></div></div>
+  <div class="tool-grid">
+    <article class="tool-card" data-tool="basic calculator">
+      <div class="tool-icon">🧮</div><h3>Basic Calculator</h3><p>Everyday arithmetic with a clean calculator.</p>
+      <button class="open-tool" data-modal="basicCalc">Open calculator</button>
+    </article>
+    <article class="tool-card" data-tool="percentage calculator">
+      <div class="tool-icon">%</div><h3>Percentage</h3><p>Find percentages, increases and decreases.</p>
+      <button class="open-tool" data-modal="percentCalc">Open calculator</button>
+    </article>
+    <article class="tool-card" data-tool="age calculator">
+      <div class="tool-icon">🎂</div><h3>Age Calculator</h3><p>Calculate age from a date of birth.</p>
+      <button class="open-tool" data-modal="ageCalc">Open calculator</button>
+    </article>
+    <article class="tool-card" data-tool="discount calculator">
+      <div class="tool-icon">🏷️</div><h3>Discount</h3><p>Calculate sale price and savings.</p>
+      <button class="open-tool" data-modal="discountCalc">Open calculator</button>
+    </article>
+    <article class="tool-card" data-tool="bmi calculator">
+      <div class="tool-icon">⚖️</div><h3>BMI</h3><p>Calculate body mass index using metric units.</p>
+      <button class="open-tool" data-modal="bmiCalc">Open calculator</button>
+    </article>
+    <article class="tool-card" data-tool="scientific calculator">
+      <div class="tool-icon">∑</div><h3>Scientific Calculator</h3><p>Trigonometry, powers, roots and more.</p>
+      <button class="open-tool" data-modal="scientificCalc">Open calculator</button>
+    </article>
+  </div>
+</section>
+
+<section class="section alt" id="converters">
+  <div class="section-head"><div><p class="eyebrow">CONVERT</p><h2>Converters</h2></div></div>
+  <div class="converter-panel">
+    <div class="converter-tabs">
+      <button class="tab active" data-converter="length">Length</button>
+      <button class="tab" data-converter="weight">Weight</button>
+      <button class="tab" data-converter="temperature">Temperature</button>
+      <button class="tab" data-converter="area">Area</button>
+      <button class="tab" data-converter="speed">Speed</button>
+      <button class="tab" data-converter="time">Time</button>
+      <button class="tab" data-converter="data">Data</button>
+    </div>
+    <div class="converter-form">
+      <div><label>Amount</label><input id="convValue" type="number" value="1" step="any"></div>
+      <div><label>From</label><select id="convFrom"></select></div>
+      <button id="swapBtn" class="swap" title="Swap units">⇄</button>
+      <div><label>To</label><select id="convTo"></select></div>
+    </div>
+    <div class="result-box"><span>Result</span><strong id="convResult">—</strong></div>
+  </div>
+</section>
+
+<section class="section" id="pdf-tools">
+  <div class="section-head"><div><p class="eyebrow">DOCUMENTS</p><h2>PDF Tools</h2><p>Files are processed in your browser where supported.</p></div></div>
+  <div class="tool-grid">
+    <article class="tool-card" data-tool="jpg to pdf image to pdf">
+      <div class="tool-icon">🖼️</div><h3>JPG → PDF</h3><p>Turn one or more images into a PDF.</p>
+      <button class="open-tool" data-modal="jpgPdf">Open tool</button>
+    </article>
+    <article class="tool-card" data-tool="merge pdf combine pdf">
+      <div class="tool-icon">📚</div><h3>Merge PDF</h3><p>Combine selected PDF files into one document.</p>
+      <button class="open-tool" data-modal="mergePdf">Open tool</button>
+    </article>
+    <article class="tool-card" data-tool="split pdf">
+      <div class="tool-icon">✂️</div><h3>Split PDF</h3><p>Extract selected pages from a PDF.</p>
+      <button class="open-tool" data-modal="splitPdf">Open tool</button>
+    </article>
+    <article class="tool-card" data-tool="compress pdf">
+      <div class="tool-icon">🗜️</div><h3>Compress PDF</h3><p>Reduce PDF size using browser-side processing.</p>
+      <button class="open-tool" data-modal="compressPdf">Open tool</button>
+    </article>
+    <article class="tool-card" data-tool="pdf to jpg">
+      <div class="tool-icon">📄</div><h3>PDF → JPG</h3><p>Render PDF pages as JPG images.</p>
+      <button class="open-tool" data-modal="pdfJpg">Open tool</button>
+    </article>
+  </div>
+  <p class="notice">PDF features use open-source browser libraries loaded from CDN. For very large or complex PDFs, browser memory limits may apply.</p>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div><a class="brand" href="#home"><span>Q</span> QuickTools</a><p>Free, simple browser tools.</p></div>
+    <div><h4>Tools</h4><a href="#calculators">Calculators</a><a href="#converters">Converters</a><a href="#pdf-tools">PDF Tools</a></div>
+    <div><h4>Info</h4><a href="#privacy">Privacy</a><a href="#terms">Terms</a><a href="mailto:hello@example.com">Contact</a></div>
+  </div>
+  <div class="copyright">© <span id="year"></span> QuickTools. All rights reserved.</div>
+</footer>
+
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-box"><button class="close" data-close>×</button><div id="modalContent"></div></div>
+</div>
+
+<template id="basicCalcTemplate"><div class="modal-head"><p class="eyebrow">CALCULATOR</p><h2>Basic Calculator</h2></div>
+<div class="calc"><input id="calcDisplay" class="calc-display" readonly value="0"><div class="calc-grid">
+<button data-calc="C" class="danger">C</button><button data-calc="⌫">⌫</button><button data-calc="%">%</button><button data-calc="/">÷</button>
+<button data-calc="7">7</button><button data-calc="8">8</button><button data-calc="9">9</button><button data-calc="*">×</button>
+<button data-calc="4">4</button><button data-calc="5">5</button><button data-calc="6">6</button><button data-calc="-">−</button>
+<button data-calc="1">1</button><button data-calc="2">2</button><button data-calc="3">3</button><button data-calc="+">+</button>
+<button data-calc="0" class="wide">0</button><button data-calc=".">.</button><button data-calc="=" class="equals">=</button>
+</div></div></template>
+
+<template id="percentCalcTemplate"><h2>Percentage Calculator</h2><div class="form-grid">
+<label>What is <input id="p1" type="number"> % of <input id="p2" type="number">?</label><button id="pBtn">Calculate</button><div class="answer" id="pAns">—</div>
+<label><input id="p3" type="number"> is what % of <input id="p4" type="number">?</label><button id="pBtn2">Calculate</button><div class="answer" id="pAns2">—</div>
+</div></template>
+
+<template id="ageCalcTemplate"><h2>Age Calculator</h2><div class="form-grid"><label>Date of birth<input id="dob" type="date"></label><button id="ageBtn">Calculate age</button><div class="answer" id="ageAns">—</div></div></template>
+<template id="discountCalcTemplate"><h2>Discount Calculator</h2><div class="form-grid"><label>Original price<input id="price" type="number" min="0" step="any"></label><label>Discount %<input id="discount" type="number" min="0" max="100" step="any"></label><button id="discountBtn">Calculate</button><div class="answer" id="discountAns">—</div></div></template>
+<template id="bmiCalcTemplate"><h2>BMI Calculator</h2><div class="form-grid"><label>Weight (kg)<input id="bmiWeight" type="number" step="any"></label><label>Height (cm)<input id="bmiHeight" type="number" step="any"></label><button id="bmiBtn">Calculate BMI</button><div class="answer" id="bmiAns">—</div></div></template>
+
+<template id="scientificCalcTemplate"><h2>Scientific Calculator</h2><div class="form-grid"><label>Expression<input id="sciExpr" placeholder="e.g. sin(30) + sqrt(25)"></label><small>Functions: sin, cos, tan, sqrt, log, ln, abs, pi, ^</small><button id="sciBtn">Calculate</button><div class="answer" id="sciAns">—</div></div></template>
+
+<template id="jpgPdfTemplate"><h2>JPG → PDF</h2><div class="form-grid"><label>Select images<input id="jpgFiles" type="file" accept="image/jpeg,image/png" multiple></label><button id="jpgBtn">Create PDF</button><div class="answer" id="jpgAns">—</div></div></template>
+<template id="mergePdfTemplate"><h2>Merge PDF</h2><div class="form-grid"><label>Select PDF files in order<input id="mergeFiles" type="file" accept="application/pdf" multiple></label><button id="mergeBtn">Merge PDFs</button><div class="answer" id="mergeAns">—</div></div></template>
+<template id="splitPdfTemplate"><h2>Split PDF</h2><div class="form-grid"><label>PDF file<input id="splitFile" type="file" accept="application/pdf"></label><label>Pages to extract (e.g. 1,3-5)<input id="splitPages" placeholder="1,3-5"></label><button id="splitBtn">Extract pages</button><div class="answer" id="splitAns">—</div></div></template>
+<template id="compressPdfTemplate"><h2>Compress PDF</h2><div class="form-grid"><label>PDF file<input id="compressFile" type="file" accept="application/pdf"></label><button id="compressBtn">Compress PDF</button><div class="answer" id="compressAns">—</div><small>PDF recompression can reduce some files but cannot guarantee a smaller result for every PDF.</small></div></template>
+<template id="pdfJpgTemplate"><h2>PDF → JPG</h2><div class="form-grid"><label>PDF file<input id="pdfJpgFile" type="file" accept="application/pdf"></label><label>Page number<input id="pdfJpgPage" type="number" min="1" value="1"></label><button id="pdfJpgBtn">Convert page</button><div class="answer" id="pdfJpgAns">—</div></div></template>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfjs-dist/4.4.168/pdf.min.mjs" type="module"></script>
+<script src="script.js"></script>
+</body>
+</html>
