@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://quicktools.sallersaller444.workers.dev/sitemap.xml
